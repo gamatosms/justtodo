@@ -22,18 +22,21 @@
 </head>
 
 <body class=" bg-gradient-to-r from-indigo-700 to-blue-600 font-inter ">
-    <header class=" container w-full flex justify-center items-center text-4xl text-white m-5 font-bold">
-        <h1>
+    <header class=" w-4/5 text-center text-4xl text-white m-auto p-5 font-bold">
+        <h1 >
             Just a simple TO-DO
         </h1>
     </header>
     <main class="flex justify-center items-center flex-col">
-        <section class="text-white w-4/5 flex justify-center items-center">
-            <input class="input__todo rounded drop-shadow-xl p-3 text-gray-500 w-3/5 focus:outline-none" type="text" placeholder="Type a To-do">
-            <button class="btn__add rounded w-1/5 bg-indigo-500 p-3 ml-2 
-            drop-shadow-xl hover:opacity-80 duration-200 active:drop-shadow-none duration-150">Adicionar</button>
+        <section class="text-white w-full flex-col text-center xl:w-3/6">
+            <div class="w-full flex justify-center items-center mb-4">
+                <input class="input__todo rounded drop-shadow-xl p-3 text-gray-500 w-3/5 focus:outline-none" type="text" placeholder="Type a To-do">
+                <button class="btn__add rounded w-1/5 bg-indigo-500 p-3 ml-2 
+            drop-shadow-xl hover:opacity-80 duration-200 active:drop-shadow-none duration-150">Add</button>
+        </div>
+        <span class="input__warning text-red-500 hidden">Preencha o campo*</span>
         </section>
-        <section class="todo w-3/5 flex-col justify-center items-center p-5 m-6">
+        <section class="todo w-4/5 flex-col justify-center items-center p-5 m-3 xl:w-2/6">
             <ul class="list__todo">
                 <!-- <li class="list__item">
                     <input class="input__check" type="checkbox">
@@ -42,7 +45,7 @@
             </ul>
         </section>
     </main>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/main.js"></script>
     </body>
 
 </html>
