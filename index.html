@@ -5,31 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <link rel=" stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com""></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
     <title>TO DO</title>
 </head>
 
-<body>
-    <header>
+<body class=" bg-gradient-to-r from-indigo-700 to-blue-600 font-inter ">
+    <header class=" container w-full flex justify-center items-center text-4xl text-white m-5 font-bold">
         <h1>
-            Just a TO-DO
+            Just a simple TO-DO
         </h1>
     </header>
-    <main>
-        <section>
-            <div class="main-content">
-                <form id="form-lista">
-                    <input type="text" class="input__todo" placeholder="Descreva a tarefa">
-                    <button class="btn__add">Adicionar</button>
-                </form>
-                <span class="input__warning"></span>
-            </div>
+    <main class="flex justify-center items-center flex-col">
+        <section class="text-white w-4/5 flex justify-center items-center">
+            <input class="input__todo rounded drop-shadow-xl p-3 text-gray-500 w-3/5 focus:outline-none" type="text" placeholder="Type a To-do">
+            <button class="btn__add rounded w-1/5 bg-indigo-500 p-3 ml-2 
+            drop-shadow-xl hover:opacity-80 duration-200 active:drop-shadow-none duration-150">Adicionar</button>
         </section>
-        <section class="todo__conteudo">
+        <section class="todo w-3/5 flex-col justify-center items-center p-5 m-6">
+            <ul class="list__todo">
+                <!-- <li class="list__item">
+                    <input class="input__check" type="checkbox">
+                    <p class="task">Arrumar o quarto</p>
+                </li> -->
+            </ul>
         </section>
     </main>
     <script src="./assets/js/script.js"></script>
-</body>
+    </body>
 
 </html>

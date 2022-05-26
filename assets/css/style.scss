@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+.list__item {
+    display: flex;
+    align-items: center;
+    border-radius: .35rem;
+    background-color: white;
+    color: gray;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    input {
+        margin-right: 2rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+.task__item {
+    text-decoration: line-through;
+}

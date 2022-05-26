@@ -1,47 +1,42 @@
-let input = document.querySelector('.input__todo')
-let btn = document.querySelector('.btn__add')
-let title = document.querySelector('.title__test')
-let message = document.querySelector('.input__warning')
-let section = document.querySelector('.todo__conteudo')
+let inputTask = document.querySelector('.input__todo')
+let btnAdd = document.querySelector('.btn__add')
+let inputValidation = document.querySelector('.input__check')
+let taskItem = document.querySelector('.task')
+let listItem = document.querySelector('.list__item')
 
-btn.addEventListener("click", function (e) {
-    e.preventDefault()
-
-    if (input.value.length <= 0) {
-        message.textContent = 'Adicione alguma tarefa antes de salvar'
-        console.log(message.textContent);
+btnAdd.addEventListener('click', function () {
+    if (inputTask.value.length > 0) {
+        createItem(inputTask.value)
+        inputTask.value = ""
     } else {
-        message.textContent = ''
-        divCreate()
+        console.log("Ta moscando brow");
     }
-
 })
+function validaCheck() {
+    if (inputValidation.checked) {
+        console.log("true");
+        taskItem.classList.add("task__item")
+        listItem.classList.add("opacity-80")
 
-const divCreate = () => {
-
-    section.appendChild(document.createElement("div"))
-    const div = section.getElementsByTagName('div')
-    div.classList.add('.todo__item')
-
-    // createDiv.classList.add("todo__item")
-    // let div = document.querySelector('.todo__item')
-    // console.log(section);
-
-
-    // let inputElement = document.createElement("input")
-    // let p = document.createElement("p")
-    // div.appendChild(inputElement)
-    // div.appendChild(p)
-    // inputElement.setAttribute("type", "checkbox")
-    // p.textContent = input.value
+    } else {
+        console.log("false");
+    }
 }
 
-const montaDiv = () => {
-    let inputElement = document.createElement("input")
-    let p = document.createElement("p")
-    div.appendChild(inputElement)
-    div.appendChild(p)
+function createItem(task) {
+    let taskList = document.querySelector('.list__todo')
+    let li = document.createElement(`li`)
+    li.classList.add('list__item')
 
-    inputElement.setAttribute("type", "checkbox")
-    p.textContent = input.value
+    let input = document.createElement('input')
+    input.classList.add('input__check')
+    input.setAttribute('type', 'checkbox')
+    // input.setAttribute('checked', "")
+
+    let p = document.createElement('p')
+    p.textContent = task
+
+    li.appendChild(input)
+    li.appendChild(p)
+    taskList.prepend(li)
 }
