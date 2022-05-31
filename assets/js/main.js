@@ -15,6 +15,12 @@ btnAdd.addEventListener('click', function () {
 
 listTodo.addEventListener("click", function (e) {
     if (e.target.checked) {
+        // console.log("e.target"); quem disparou o evento
+        // console.log(e.target);
+        // console.log("e.target.parentNode"); o elemento pai de quem disparou o evento
+        // console.log(e.target.parentNode);
+        // console.log("this"); o elemento onde o elemento que foi disparado está construido
+        // console.log(this);
         e.target.parentNode.classList.add("task__item")
     } else {
         e.target.parentNode.classList.remove("task__item")
@@ -32,6 +38,8 @@ function createItem(task) {
 
     let p = document.createElement('p')
     p.classList.add('task')
+    p.setAttribute('contenteditable', '')
+    p.classList.add('p-2')
     p.textContent = task
 
     li.appendChild(input)
