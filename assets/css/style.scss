@@ -16,9 +16,16 @@
         height: 1.5rem;
         width: 1.5rem;
     }
+    button {
+        font-size: 2rem;
+        font-weight: bold;
+        color: indigo;
+        text-align: end;
+    }
 }
 
 .task__item {
     text-decoration: line-through;
     opacity: 80%;
 }
+
