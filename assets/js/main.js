@@ -17,9 +17,10 @@ btnAdd.addEventListener('click', function () {
 listTodo.addEventListener("click", function (e) {
     if (e.target.textContent == 'x') {
         // console.log("deletado");
+        e.target.parentNode.classList.add('fadeout')
         setInterval(() => {
             e.target.parentNode.remove();
-        }, 150)
+        }, 250)
     }
     else if (e.target.checked) {
         // console.log("e.target"); quem disparou o evento
@@ -47,7 +48,6 @@ function createItem(task) {
     //create text
     let p = document.createElement('p')
     p.classList.add('task')
-    p.setAttribute('contenteditable', '')
     p.classList.add('p-2')
     p.classList.add('w-5/6')
     p.textContent = task

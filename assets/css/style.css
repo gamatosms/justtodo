@@ -34,4 +34,10 @@
   text-decoration: line-through;
   opacity: 80%;
 }
+
+.fadeout {
+  opacity: 0;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
 /*# sourceMappingURL=style.css.map */
