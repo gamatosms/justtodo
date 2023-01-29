@@ -4,30 +4,24 @@
 }
 
 .list__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: .35rem;
+  align-items: center;
+  border-radius: 0.35rem;
   background-color: white;
-  color: gray;
+  color: rgb(43, 43, 43);
   padding: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 .list__item input {
   margin-right: 2rem;
   height: 1.5rem;
   width: 1.5rem;
 }
-
 .list__item button {
-  font-size: 2rem;
-  font-weight: bold;
-  color: indigo;
+  width: 21px;
+  height: 24px;
   text-align: end;
+  background-image: url("../images/trash-can-regular.svg");
 }
 
 .task__item {
@@ -37,7 +31,5 @@
 
 .fadeout {
   opacity: 0;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-/*# sourceMappingURL=style.css.map */
+  transition: 0.25s;
+}/*# sourceMappingURL=style.css.map */

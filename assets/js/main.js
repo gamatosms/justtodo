@@ -15,20 +15,14 @@ btnAdd.addEventListener('click', function () {
 })
 
 listTodo.addEventListener("click", function (e) {
-    if (e.target.textContent == 'x') {
-        // console.log("deletado");
+    if (e.target.classList == 'btn__delete') {
+        console.log(e.target)
         e.target.parentNode.classList.add('fadeout')
         setInterval(() => {
             e.target.parentNode.remove();
         }, 250)
     }
     else if (e.target.checked) {
-        // console.log("e.target"); quem disparou o evento
-        // console.log(e.target);
-        // console.log("e.target.parentNode"); o elemento pai de quem disparou o evento
-        // console.log(e.target.parentNode);
-        // console.log("this"); o elemento onde o elemento que foi disparado está construido
-        // console.log(this);
         e.target.parentNode.classList.add("task__item")
     } else {
         e.target.parentNode.classList.remove("task__item")
@@ -55,7 +49,10 @@ function createItem(task) {
     //create delete button
     let btn = document.createElement('button')
     btn.classList.add('btn__delete')
-    btn.textContent = 'x'
+    // let btnIcon = document.createElement('img')
+    // btnIcon.classList.add('btn__delete-icon')
+    // btnIcon.setAttribute('src','./assets/images/trash-can-regular.svg')
+    // btn.appendChild(btnIcon)
 
     li.appendChild(input)
     li.appendChild(p)
